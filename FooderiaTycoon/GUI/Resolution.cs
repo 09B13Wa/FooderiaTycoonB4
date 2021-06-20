@@ -186,7 +186,7 @@ namespace FooderiaTycoon
                 int r2 = secondResolution.Width * secondResolution.Height;
                 return r1 == r2;
             }
-            else if ((firstResolution is null) && (secondResolution is null))
+            else if (firstResolution is null && secondResolution is null)
             {
                 return true;
             }
@@ -288,15 +288,13 @@ namespace FooderiaTycoon
             {
                 Resolution resolution = new Resolution(
                     firstResolution.Width - secondResolution.Width,
-                    firstResolution.Height - secondResolution.Height,
-                    firstResolution.FrameRate - secondResolution.FrameRate);
+                    firstResolution.Height - secondResolution.Height);
                 return resolution;
             }
 
             if (firstResolution is null && !(secondResolution is null))
             {
-                Resolution resolution1 = new Resolution(-secondResolution.Width, -secondResolution.Height,
-                    -secondResolution.FrameRate);
+                Resolution resolution1 = new Resolution(-secondResolution.Width, -secondResolution.Height);
                 return resolution1;
             }
 
