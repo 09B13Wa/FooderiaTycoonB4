@@ -178,22 +178,50 @@ namespace FooderiaTycoon.Sound
 
         public void RemoveMusic(Music music)
         {
-            throw new NotImplementedException();
+            _queue.Remove(music);
         }
 
         public void ChangeSpotsMusic(Music music, int newIndex)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < _queueSize; i += 1)
+            {
+                if (i == newIndex)
+                {
+                    _queue[i] = music;
+                }
+            }
         }
 
         public void ChangeSpotsMusic(int oldIndex, int newIndex)
         {
-            throw new NotImplementedException();
+            Music music = _queue[oldIndex];
+            for (int i = 0; i < _queueSize; i += 1)
+            {
+                if (i == newIndex)
+                {
+                    _queue[i] = music ;
+                }
+            }
         }
 
         public List<int> FindMusicLocation(Music music)
         {
-            throw new NotImplementedException();
+            List<int> list = new List<int>();
+            int i = 0;
+            foreach (Music musics in _queue)
+            {
+                if (music == musics)
+                {
+                    list.Add(i);
+                    return list;
+                }
+                else
+                {
+                    i += 1;
+                }
+            }
+
+            return list;
         }
 
         public int FindFirstOcurrance(Music music)
@@ -208,7 +236,15 @@ namespace FooderiaTycoon.Sound
 
         public bool IsMusicInQueue(Music music)
         {
-            throw new NotImplementedException();
+            foreach (Music musics in _queue)
+            {
+                if (music == musics)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public void NewStyle(string name, List<Music> newStyle)
