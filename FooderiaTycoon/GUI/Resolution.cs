@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.IO;
 
 namespace FooderiaTycoon
 {
@@ -143,7 +144,14 @@ namespace FooderiaTycoon
 
         public override bool Equals(object obj)
         {
-            throw new NotImplementedException();
+            if (obj is Resolution)
+            {
+                Resolution resolution = (Resolution) obj;
+                return resolution == this;
+            }
+
+            return false;
+
         }
 
         public IEnumerator GetEnumerator()
@@ -153,12 +161,37 @@ namespace FooderiaTycoon
 
         public int CompareTo(object obj)
         {
-            throw new NotImplementedException();
+            if (obj is Resolution)
+            {
+                Resolution resolution = (Resolution) obj;
+                if (resolution > this)
+                {
+                    return 1;
+                }
+                if (Equals(obj))
+                {
+                    return 0;
+                }
+                    
+            }
+            return -1;
         }
 
         public static bool operator ==(Resolution firstResolution, Resolution secondResolution)
         {
-            throw new NotImplementedException();
+            //return !(secondResolution is null) && !(firstResolution is null) && firstResolution.FrameRate == secondResolution.FrameRate;
+            if (!(firstResolution is null) && !(secondResolution is null))
+            {
+                int r1 = firstResolution.Width * firstResolution.Height;
+                int r2 = secondResolution.Width * secondResolution.Height;
+                return r1 == r2;
+            }
+            else if ((firstResolution is null) && (secondResolution is null))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public static bool operator !=(Resolution firstResolution, Resolution secondResolution)
@@ -168,42 +201,134 @@ namespace FooderiaTycoon
         
         public static bool operator <(Resolution firstResolution, Resolution secondResolution)
         {
-            throw new NotImplementedException();
+            if (!(firstResolution is null) && !(secondResolution is null))
+            {
+                int r1 = firstResolution.Width * firstResolution.Height;
+                int r2 = secondResolution.Width * secondResolution.Height;
+                return r1 < r2;
+            }
+            else if (firstResolution is null && !(secondResolution is null))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public static bool operator >(Resolution firstResolution, Resolution secondResolution)
         {
-            throw new NotImplementedException();
+            if (!(firstResolution is null) && !(secondResolution is null))
+            {
+                int r1 = firstResolution.Width * firstResolution.Height;
+                int r2 = secondResolution.Width * secondResolution.Height;
+                return r1 > r2;
+            }
+            else if (secondResolution is null && !(firstResolution is null))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public static bool operator <=(Resolution firstResolution, Resolution secondResolution)
         {
-            throw new NotImplementedException();
+            if (!(firstResolution is null) && !(secondResolution is null))
+            {
+                int r1 = firstResolution.Width * firstResolution.Height;
+                int r2 = secondResolution.Width * secondResolution.Height;
+                return r1 <= r2;
+            }
+            else if (secondResolution is null && !(firstResolution is null))
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public static bool operator >=(Resolution firstResolution, Resolution secondResolution)
         {
-            throw new NotImplementedException();
+            if (!(firstResolution is null) && !(secondResolution is null))
+            {
+                int r1 = firstResolution.Width * firstResolution.Height;
+                int r2 = secondResolution.Width * secondResolution.Height;
+                return r1 >= r2;
+            }
+            else if (firstResolution is null && !(secondResolution is null))
+            {
+                return false;
+            }
+
+            return true;
         }
         
         public static Resolution operator +(Resolution firstResolution, Resolution secondResolution)
         {
-            throw new NotImplementedException();
+            if (!(firstResolution is null) && !(secondResolution is null))
+            {
+                Resolution resolution = new Resolution(
+                    firstResolution.Width + secondResolution.Width,
+                    firstResolution.Height + secondResolution.Height,
+                    firstResolution.FrameRate + secondResolution.FrameRate);
+                return resolution;
+            }
+
+            if (firstResolution is null && !(secondResolution is null))
+            {
+                return secondResolution;
+            }
+
+            return firstResolution;
         }
 
         public static Resolution operator -(Resolution firstResolution, Resolution secondResolution)
         {
-            throw new NotImplementedException();
+            if (!(firstResolution is null) && !(secondResolution is null))
+            {
+                Resolution resolution = new Resolution(
+                    firstResolution.Width - secondResolution.Width,
+                    firstResolution.Height - secondResolution.Height,
+                    firstResolution.FrameRate - secondResolution.FrameRate);
+                return resolution;
+            }
+
+            if (firstResolution is null && !(secondResolution is null))
+            {
+                Resolution resolution1 = new Resolution(-secondResolution.Width, -secondResolution.Height,
+                    -secondResolution.FrameRate);
+                return resolution1;
+            }
+
+            return firstResolution;
         }
 
         public static Resolution operator *(Resolution firstResolution, Resolution secondResolution)
         {
-            throw new NotImplementedException();
+            if (!(firstResolution is null) && !(secondResolution is null))
+            {
+                Resolution resolution = new Resolution(
+                    firstResolution.Width * secondResolution.Width,
+                    firstResolution.Height * secondResolution.Height,
+                    firstResolution.FrameRate * secondResolution.FrameRate);
+                return resolution;
+            }
+
+            return null;
         }
 
         public static Resolution operator /(Resolution firstResolution, Resolution secondResolution)
         {
-            throw new NotImplementedException();
+            if (!(firstResolution is null) && !(secondResolution is null))
+            {
+                Resolution resolution = new Resolution(
+                    firstResolution.Width / secondResolution.Width,
+                    firstResolution.Height / secondResolution.Height,
+                    firstResolution.FrameRate / secondResolution.FrameRate);
+                return resolution;
+            }
+
+            return null;
         }
 
         public static Resolution operator +(Resolution resolution)
