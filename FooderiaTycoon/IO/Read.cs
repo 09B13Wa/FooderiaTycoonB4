@@ -14,7 +14,6 @@ namespace FooderiaTycoon.IO
         private List<string> _audioFiles;
         private List<string> _videoFiles;
         private Dictionary<string, Func<string, List<string>>> _readers;
-
         public Reader(string path)
         {
             _gameDirectory = path;
@@ -119,7 +118,60 @@ namespace FooderiaTycoon.IO
         {
             throw new NotImplementedException();
         }
+
+        public void AddReader(string extension, Func<string, List<string>> readerFunction)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveReader(string extension, Func<string, List<string>> readerFunction)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsReaderPresent(string extension, Func<string, List<string>> readerFunction)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<string> ReadFile(string fileName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<string> ReadFileFromPath(string path)
+        {
+            throw new NotImplementedException();
+        }
         
+        public Bitmap ReadBitmap(string musicName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Bitmap ReadBitmapFromPath(string path)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Music ReadMusic(string musicName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Music ReadMusicFromPath(string path)
+        {
+            throw new NotImplementedException();
+        }
         
+        public List<Bitmap> ReadVideo(string musicName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Bitmap> ReadVideoFromPath(string path)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
