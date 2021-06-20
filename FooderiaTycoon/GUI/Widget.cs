@@ -51,12 +51,12 @@ namespace FooderiaTycoon.GUI
 
         public void SetNewXPosition(int x)
         {
-            throw new NotImplementedException();
+            _position.x = x;
         }
 
         public void SetNewYPosition(int y)
         {
-            throw new NotImplementedException();
+            _position.y = y;
         }
 
         public void SetNewPosition(int x, int y)
