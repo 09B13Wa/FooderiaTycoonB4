@@ -20,7 +20,7 @@ namespace FooderiaTycoon
 
         public StoryTeller(FooderiaTycoon fooderiaTycoon)
         {
-            throw new NotImplementedException();
+            this._fooderiaTycoon = fooderiaTycoon;
         }
 
         public StoryTeller(FooderiaTycoon fooderiaTycoon, StoryTellerBase storyTellerBase, HashSet<Event> events)
