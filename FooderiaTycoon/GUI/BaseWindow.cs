@@ -123,17 +123,18 @@ namespace FooderiaTycoon.GUI
 
         public void SetNewOrigin(int x, int y)
         {
-            throw new NotImplementedException();
+            SetNewXOrigin(x);
+            SetNewYOrigin(y);
         }
 
         private void SetNewXOrigin(int x)
         {
-            throw new NotImplementedException();
+            _originCoordinates.x = x;
         }
         
         private void SetNewYOrigin(int y)
         {
-            throw new NotImplementedException();
+            _originCoordinates.y = y;
         }
         
         public Bitmap Draw()
