@@ -30,9 +30,12 @@ namespace FooderiaTycoon.GUI
             return windowObject;
         }
         
-        public static WindowObject CreateButton(string name, int x, int y, bool isActive, InterfaceLinker interfaceLinker, Bitmap bitmap)
+        public static WindowObject CreateButton(FooderiaTycoon game, string name, int x, int y, bool isActive, InterfaceLinker interfaceLinker, Bitmap bitmap)
         {
-            throw new NotImplementedException();
+            // I added "FooderiaTycoon game", to create a widget
+            Widget widget = new Widget(game, x, y, interfaceLinker, isActive, bitmap);
+            WindowObject windowObject = new WindowObject(name, id, widget);
+            return windowObject;
         }
         
         public static WindowObject CreateCheckMark(string name, int x, int y, bool isActive)
@@ -50,9 +53,13 @@ namespace FooderiaTycoon.GUI
             throw new NotImplementedException();
         }
         
-        public static Widget CreateButtonSimple(string name, int x, int y, bool isActive)
+        public static Widget CreateButtonSimple(FooderiaTycoon game, int x, int y,InterfaceLinker interfaceLinker, bool isActive)
         {
-            throw new NotImplementedException();
+            // I added "FooderiaTycoon game" and "InterfaceLinker interfaceLinker", to create a widget
+            //I removed "string name" in the parameters
+            Widget widget = new Widget(game, x, y, interfaceLinker, isActive);
+            return widget;
+
         }
     }
 }
