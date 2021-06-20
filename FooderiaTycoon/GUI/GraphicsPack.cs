@@ -17,8 +17,10 @@ namespace FooderiaTycoon.GUI
             _game = game;
         }
 
-        public GraphicsPack(string path)
+        public GraphicsPack(FooderiaTycoon game, List<string> model, string path)
         {
+            _game = game;
+            _model = model;
             throw new NotImplementedException();
         }
 
@@ -29,9 +31,9 @@ namespace FooderiaTycoon.GUI
             throw new NotImplementedException();
         }
 
-        public static bool IsCompatible(string path)
+        public static bool IsCompatible(FooderiaTycoon game, List<string> model, string path)
         {
-            return IsCompatible(new GraphicsPack(path));
+            return IsCompatible(new GraphicsPack(game, model, path));
         }
 
         private static bool BuildModel()
