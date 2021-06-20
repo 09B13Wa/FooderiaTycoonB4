@@ -21,9 +21,13 @@ namespace FooderiaTycoon.GUI
         public int Id => _id;
         public Widget Widget => _widget;
 
-        public static WindowObject CreateButton(string name, int x, int y, bool isActive, InterfaceLinker interfaceLinker)
+        public static WindowObject CreateButton(FooderiaTycoon game, string name, int x, int y, bool isActive, InterfaceLinker interfaceLinker)
         {
-            throw new NotImplementedException();
+            // I added "FooderiaTycoon game", to create a widget
+            //TODO : id 
+            Widget widget = new Widget(game, x, y, interfaceLinker, isActive);
+            WindowObject windowObject = new WindowObject(name, id, widget);
+            return windowObject;
         }
         
         public static WindowObject CreateButton(string name, int x, int y, bool isActive, InterfaceLinker interfaceLinker, Bitmap bitmap)

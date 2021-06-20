@@ -179,7 +179,6 @@ namespace FooderiaTycoon
 
         public static bool operator ==(Resolution firstResolution, Resolution secondResolution)
         {
-            //return !(secondResolution is null) && !(firstResolution is null) && firstResolution.FrameRate == secondResolution.FrameRate;
             if (!(firstResolution is null) && !(secondResolution is null))
             {
                 int r1 = firstResolution.Width * firstResolution.Height;
@@ -307,11 +306,9 @@ namespace FooderiaTycoon
             {
                 Resolution resolution = new Resolution(
                     firstResolution.Width * secondResolution.Width,
-                    firstResolution.Height * secondResolution.Height,
-                    firstResolution.FrameRate * secondResolution.FrameRate);
+                    firstResolution.Height * secondResolution.Height);
                 return resolution;
             }
-
             return null;
         }
 
@@ -321,11 +318,10 @@ namespace FooderiaTycoon
             {
                 Resolution resolution = new Resolution(
                     firstResolution.Width / secondResolution.Width,
-                    firstResolution.Height / secondResolution.Height,
-                    firstResolution.FrameRate / secondResolution.FrameRate);
+                    firstResolution.Height / secondResolution.Height);
                 return resolution;
             }
-
+            
             return null;
         }
 
