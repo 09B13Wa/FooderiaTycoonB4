@@ -99,7 +99,7 @@ namespace FooderiaTycoon.Sound
 
         private string TrackNumberToStr()
         {
-            throw new NotImplementedException();
+            return CurrentTrackStr;
         }
 
         private void CheckPercentage(int value)
@@ -183,6 +183,7 @@ namespace FooderiaTycoon.Sound
 
         public void ChangeSpotsMusic(Music music, int newIndex)
         {
+            RemoveMusic(music);
             for (int i = 0; i < _queueSize; i += 1)
             {
                 if (i == newIndex)
@@ -195,13 +196,7 @@ namespace FooderiaTycoon.Sound
         public void ChangeSpotsMusic(int oldIndex, int newIndex)
         {
             Music music = _queue[oldIndex];
-            for (int i = 0; i < _queueSize; i += 1)
-            {
-                if (i == newIndex)
-                {
-                    _queue[i] = music ;
-                }
-            }
+            ChangeSpotsMusic(music, newIndex);
         }
 
         public List<int> FindMusicLocation(Music music)
@@ -226,12 +221,28 @@ namespace FooderiaTycoon.Sound
 
         public int FindFirstOcurrance(Music music)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < _queueSize; i += 1)
+            {
+                if (music == _queue[i])
+                {
+                    return i;
+                }
+            }
+
+            return -1;
         }
 
         public int FindLastOccurance(Music music)
         {
-            throw new NotImplementedException();
+            for (int i = _queueSize; i > -1; i -= 1)
+            {
+                if (music == _queue[i])
+                {
+                    return i;
+                }
+            }
+
+            return -1;
         }
 
         public bool IsMusicInQueue(Music music)
@@ -249,7 +260,7 @@ namespace FooderiaTycoon.Sound
 
         public void NewStyle(string name, List<Music> newStyle)
         {
-            throw new NotImplementedException();
+            
         }
         
         public void NewStyle(List<Music> newStyle, string name)
@@ -259,32 +270,65 @@ namespace FooderiaTycoon.Sound
 
         public void RemoveStyle(List<Music> style)
         {
-            throw new NotImplementedException();
+            
+            for (int i = 0; i < _styles.Count; i += 1)
+            {
+                if (_styles[i].style == style)
+                {
+                    _styles.Remove(_styles[i]);
+                }
+            }
+            
         }
         
         public void RemoveStyle(string name)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < _styles.Count; i += 1)
+            {
+                if (_styles[i].name == name)
+                {
+                    _styles.Remove(_styles[i]);
+                }
+            }
         }
         
         public void RemoveStyle(List<Music> style, string name)
         {
             RemoveStyle(name);
+            
         }
         
         public void RemoveStyle(string name, List<Music> style)
         {
             RemoveStyle(name);
+            
         }
 
         public int FindStyle(List<Music> style)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < _styles.Count; i += 1)
+            {
+                if (_styles[i].style == style)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+
         }
         
         public int FindStyle(string name)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < _styles.Count; i += 1)
+            {
+                if (_styles[i].name == name)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
         }
         
         public int FindStyle(List<Music> style, string name)
@@ -299,12 +343,12 @@ namespace FooderiaTycoon.Sound
 
         public bool IsStyleAlreadyIn(string name)
         {
-            throw new NotImplementedException();
+            return FindStyle(name) != -1;
         }
         
         public bool IsStyleAlreadyIn(List<Music> style)
         {
-            throw new NotImplementedException();
+            return FindStyle(style) != -1;
         }
         
         public bool IsStyleAlreadyIn(string name, List<Music> style)
