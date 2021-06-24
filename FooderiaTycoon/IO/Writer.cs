@@ -65,12 +65,27 @@ namespace FooderiaTycoon.IO
 
         public void RemovePath(string path)
         {
-            
+            throw new NotImplementedException();
         }
         
-        public void IsPathPresent(string path)
+        public bool IsPathPresent(string path)
         {
-            
+            throw new NotImplementedException();
         }
+
+        public Func<List<string>, string> GetFunctionAssociatedWithPath(string path)
+        {
+            return IsPathPresent(path) ? _paths[path] : null;
+        }
+
+        public void Export(string fileName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Write(string path)
+        {
+            throw new NotImplementedException();
+        } 
     }
 }

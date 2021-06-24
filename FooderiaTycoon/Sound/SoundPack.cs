@@ -21,14 +21,14 @@ namespace FooderiaTycoon.Sound
 
         public Dictionary<string, Music> Relation => _relation;
 
-        public static bool IsCompatible(GraphicsPack graphicsPack)
+        public static bool IsCompatible(SoundPack graphicsPack)
         {
             throw new NotImplementedException();
         }
 
         public static bool IsCompatible(string path)
         {
-            return IsCompatible(new GraphicsPack(path));
+            return IsCompatible(new SoundPack(path));
         }
     }
 }

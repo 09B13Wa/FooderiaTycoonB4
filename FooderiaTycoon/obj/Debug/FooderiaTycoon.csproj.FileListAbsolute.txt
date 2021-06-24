@@ -1,0 +1,9 @@
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoon\bin\Debug\FooderiaTycoon.dll
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoon\bin\Debug\FooderiaTycoon.pdb
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoon\bin\Debug\CSCore.dll
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoon\bin\Debug\CSCore.xml
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoon\obj\Debug\FooderiaTycoon.csprojAssemblyReference.cache
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoon\obj\Debug\FooderiaTycoon.csproj.CoreCompileInputs.cache
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoon\obj\Debug\FooderiaTycoon.csproj.CopyComplete
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoon\obj\Debug\FooderiaTycoon.dll
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoon\obj\Debug\FooderiaTycoon.pdb

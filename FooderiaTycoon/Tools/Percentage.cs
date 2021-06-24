@@ -5,7 +5,6 @@ namespace FooderiaTycoon.Tools
     public struct Percentage
     {
         private int _percentageValue;
-        
         public int Percent
         {
             get => _percentageValue;

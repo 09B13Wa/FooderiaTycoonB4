@@ -1,4 +1,6 @@
-﻿namespace FooderiaTycoon
+﻿using FooderiaTycoon.Core;
+
+namespace FooderiaTycoon
 {
     public class MapGeneration
     {

@@ -1,0 +1,15 @@
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\bin\Debug\FooderiaTycoonLauncher.exe.config
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\bin\Debug\FooderiaTycoonLauncher.exe
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\bin\Debug\FooderiaTycoonLauncher.pdb
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\FooderiaTycoonLauncher.csprojAssemblyReference.cache
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\MainWindow.g.cs
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\App.g.cs
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\FooderiaTycoonLauncher_MarkupCompile.cache
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\FooderiaTycoonLauncher_MarkupCompile.lref
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\MainWindow.baml
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\FooderiaTycoonLauncher.g.resources
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\WpfApplication1.Properties.Resources.resources
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\FooderiaTycoonLauncher.csproj.GenerateResource.cache
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\FooderiaTycoonLauncher.csproj.CoreCompileInputs.cache
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\FooderiaTycoonLauncher.exe
+C:\Users\jasch\RiderProjects\FooderiaTycoon\FooderiaTycoonLauncher\obj\Debug\FooderiaTycoonLauncher.pdb
